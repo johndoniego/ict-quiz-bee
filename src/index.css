@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-bg: var(--bg);
+  --color-ink: var(--ink);
+  --color-accent: var(--accent);
+  --color-accent-muted: var(--accent-muted);
+}
+
+:root {
+  --bg: #FBFBFA;
+  --ink: #1C1917;
+  --accent: #0ea5e9;
+  --accent-muted: #e0f2fe;
+}
+
+.theme-midnight {
+  --bg: #0A0A0B;
+  --ink: #F5F5F4;
+  --accent: #EAB308;
+  --accent-muted: #422006;
+}
+
+.theme-sunset {
+  --bg: #FFF7ED;
+  --ink: #431407;
+  --accent: #F97316;
+  --accent-muted: #FFEDD5;
+}
+
+.theme-forest {
+  --bg: #F0F4F0;
+  --ink: #064E3B;
+  --accent: #10B981;
+  --accent-muted: #D1FAE5;
+}
+
+.theme-brutalist {
+  --bg: #FFFFFF;
+  --ink: #000000;
+  --accent: #00FF00;
+  --accent-muted: #CCFFCC;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-ink antialiased transition-colors duration-500;
+  }
+}
+
+.glass {
+  @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.neo-brutal {
+  @apply border-2 border-ink shadow-[4px_4px_0px_0px_rgba(var(--ink-rgb),1)];
+}
+
+/* Custom Artistic Utilities */
+.text-balance {
+  text-wrap: balance;
+}
+
+.mask-fade-bottom {
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+.noise-bg {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+}
