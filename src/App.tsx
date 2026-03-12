@@ -26,7 +26,12 @@ import {
   Zap,
   Database,
   Trash2,
-  ArrowRight
+  ArrowRight,
+  Sparkles,
+  Waves,
+  Heart,
+  Shuffle,
+  Dices
 } from "lucide-react";
 import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
@@ -63,37 +68,14 @@ export default function App() {
     localStorage.setItem("ict_master_questions", JSON.stringify(masterQuestions));
   }, [masterQuestions]);
 
-  // Background pre-fetching
-  useEffect(() => {
-    if (view === "game-mode" && selectedTopic) {
-      const difficulties = ["Easy", "Medium", "Difficult"];
-      difficulties.forEach(async (diff) => {
-        const filtered = masterQuestions.filter(q => q.topic === selectedTopic && q.difficulty === diff);
-        // If we have less than 20 questions (2 sets), pre-fetch more
-        if (filtered.length < 20) {
-          try {
-            const generated = await generateQuestions(selectedTopic, diff);
-            if (generated.length > 0) {
-              setMasterQuestions(prev => {
-                const combined = [...prev, ...generated];
-                const unique = Array.from(new Map(combined.map(q => [q.question, q])).values());
-                return unique;
-              });
-            }
-          } catch (e) {
-            console.error("Pre-fetch failed", e);
-          }
-        }
-      });
-    }
-  }, [view, selectedTopic]);
+  // Background pre-fetching removed for performance — questions are served from the preloaded bank
   const [isGeneratingBank, setIsGeneratingBank] = useState(false);
   const [userAnswers, setUserAnswers] = useState<Record<string, string>>({});
   const [score, setScore] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  const [theme, setTheme] = useState<'classic' | 'midnight' | 'sunset' | 'forest' | 'brutalist'>('classic');
+  const [theme, setTheme] = useState<'classic' | 'midnight' | 'sunset' | 'forest' | 'brutalist' | 'neon' | 'ocean' | 'rose'>('classic');
 
   // Load theme from localStorage
   useEffect(() => {
@@ -128,6 +110,16 @@ export default function App() {
     { id: "Cloud Computing & Virtualization", icon: <CloudLightning className="w-6 h-6" />, color: "bg-blue-600" },
   ];
 
+  // Shuffle helper
+  const shuffleArray = <T,>(arr: T[]): T[] => {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  };
+
   const startQuiz = async (topic: string, difficulty: string, setNum?: number) => {
     setIsLoading(true);
     let quizQuestions: Question[] = [];
@@ -158,16 +150,27 @@ export default function App() {
       }
     } else {
       setSelectedSet(0);
-      // Standard Mode: Generate new questions
-      const generated = await generateQuestions(topic, difficulty);
-      quizQuestions = generated;
+      // PERFORMANCE FIX: Try preloaded questions first before calling API
+      const diffFilter = difficulty === "Mixed" ? undefined : difficulty;
+      const filtered = masterQuestions.filter(
+        q => q.topic === topic && (diffFilter ? q.difficulty === diffFilter : true)
+      );
       
-      // Add to master bank
-      setMasterQuestions(prev => {
-        const combined = [...prev, ...generated];
-        const unique = Array.from(new Map(combined.map(q => [q.question, q])).values());
-        return unique;
-      });
+      if (filtered.length >= 10) {
+        // We have enough preloaded questions — instant start, no API call!
+        quizQuestions = shuffleArray<Question>(filtered).slice(0, 10);
+      } else {
+        // Fallback: generate via API
+        const generated = await generateQuestions(topic, difficulty);
+        quizQuestions = generated;
+        
+        // Add to master bank
+        setMasterQuestions(prev => {
+          const combined = [...prev, ...generated];
+          const unique = Array.from(new Map(combined.map(q => [q.question, q])).values());
+          return unique;
+        });
+      }
     }
 
     setQuestions(quizQuestions);
@@ -175,6 +178,26 @@ export default function App() {
     setUserAnswers({});
     setScore(0);
     setIsLoading(false);
+    setView("quiz");
+  };
+
+  // RANDOM QUIZ: picks random difficulty, random questions from ALL topics
+  const startRandomQuiz = () => {
+    const difficulties: Array<"Easy" | "Medium" | "Difficult"> = ["Easy", "Medium", "Difficult"];
+    const randomDiff = difficulties[Math.floor(Math.random() * difficulties.length)];
+    const filtered = masterQuestions.filter(q => q.difficulty === randomDiff);
+    const shuffled = shuffleArray(filtered).slice(0, 10);
+    
+    if (shuffled.length === 0) return;
+    
+    setSelectedTopic("Random Mix");
+    setSelectedDifficulty(randomDiff);
+    setSelectedSet(0);
+    setQuestions(shuffled);
+    setCurrentQuestionIndex(0);
+    setUserAnswers({});
+    setScore(0);
+    setShowExplanation(false);
     setView("quiz");
   };
 
@@ -263,8 +286,9 @@ export default function App() {
       {/* Background Effects */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <div className="absolute inset-0 noise-bg"></div>
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-accent/5 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-accent/5 rounded-full blur-[120px]"></div>
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-accent/5 rounded-full blur-[120px] animate-blob"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-accent/5 rounded-full blur-[120px] animate-blob-delay"></div>
+        <div className="absolute top-[30%] right-[20%] w-[25%] h-[25%] bg-accent/3 rounded-full blur-[100px] animate-blob"></div>
       </div>
 
       <div className="relative z-10">
@@ -331,12 +355,37 @@ export default function App() {
                   className="text-7xl md:text-9xl font-display font-black tracking-tighter leading-[0.8] uppercase"
                 >
                   Master the <br />
-                  <span className="text-accent italic font-serif lowercase tracking-normal">ICT Domain</span>
+                  <span className="gradient-text italic font-serif lowercase tracking-normal">ICT Domain</span>
                 </motion.h2>
                 <p className="text-ink/60 max-w-2xl text-xl font-medium leading-relaxed text-balance">
-                  Select a topic to begin your training. Our AI generates unique questions for every session to ensure complete mastery of the digital landscape.
+                  Select a topic to begin your training. Or hit <strong>Random Quiz</strong> for a surprise challenge across all topics.
                 </p>
               </div>
+
+              {/* RANDOM QUIZ BUTTON */}
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                onClick={startRandomQuiz}
+                className="group w-full relative bg-accent/5 border-2 border-accent/20 p-8 md:p-10 rounded-[2.5rem] hover:border-accent hover:shadow-2xl hover:shadow-accent/10 transition-all text-left overflow-hidden pulse-ring mb-4"
+              >
+                <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-30 group-hover:scale-150 transition-all">
+                  <Dices className="w-24 h-24" />
+                </div>
+                <div className="flex items-center gap-6 relative z-10">
+                  <div className="w-20 h-20 rounded-2xl bg-accent flex items-center justify-center text-white shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-transform">
+                    <Shuffle className="w-9 h-9" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-3xl md:text-4xl font-display font-black uppercase tracking-tight group-hover:text-accent transition-colors">Random Quiz</h3>
+                    <p className="text-sm text-ink/40 font-medium mt-1">Random topics • Random difficulty • 10 surprise questions • Instant start</p>
+                  </div>
+                  <div className="hidden md:flex items-center gap-2 text-accent font-bold text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all">
+                    GO <ArrowRight className="w-5 h-5" />
+                  </div>
+                </div>
+              </motion.button>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {topics.map((topic, idx) => (
@@ -369,34 +418,15 @@ export default function App() {
                   </motion.button>
                 ))}
               </div>
-            </motion.div>
-          )}
-                
-                <button
-                  onClick={() => setView("master-bank")}
-                  className="group relative bg-stone-900 p-8 rounded-[2rem] border border-stone-800 hover:border-brand-500 transition-all text-left flex flex-col justify-between min-h-[240px] hover:shadow-2xl hover:-translate-y-1"
-                >
-                  <div>
-                    <div className="bg-brand-500 w-14 h-14 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:rotate-12 transition-transform shadow-lg">
-                      <FileText className="w-6 h-6" />
-                    </div>
-                    <h3 className="text-2xl font-display font-bold mb-3 leading-tight uppercase tracking-tight text-white">Question Bank</h3>
-                    <p className="text-sm text-stone-500 font-medium leading-snug">Browse and generate a comprehensive list of all questions and answers.</p>
-                  </div>
-                  <div className="mt-6 flex items-center gap-2 text-brand-400 font-bold text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
-                    View Bank <ChevronRight className="w-4 h-4" />
-                  </div>
-                </button>
-              </div>
 
-              <div className="bg-stone-100 border border-stone-200 p-10 rounded-[3rem] flex flex-col md:flex-row items-center justify-between gap-8 mt-12">
+              <div className="bg-ink/5 border border-ink/10 p-10 rounded-[3rem] flex flex-col md:flex-row items-center justify-between gap-8 mt-12">
                 <div className="space-y-3">
                   <h3 className="text-3xl font-display font-bold uppercase tracking-tight">Study Guide</h3>
-                  <p className="text-stone-500 font-medium">Download the complete ICT Quiz Bee study guide compiled from all sections.</p>
+                  <p className="text-ink/40 font-medium">Download the complete ICT Quiz Bee study guide compiled from all sections.</p>
                 </div>
                 <button 
                   onClick={() => exportToPDF("study")}
-                  className="bg-stone-900 text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-3 hover:bg-brand-600 transition-all whitespace-nowrap shadow-xl"
+                  className="bg-ink text-bg px-8 py-4 rounded-2xl font-bold flex items-center gap-3 hover:bg-accent transition-all whitespace-nowrap shadow-xl"
                 >
                   <Download className="w-5 h-5" /> DOWNLOAD PDF
                 </button>
@@ -434,23 +464,29 @@ export default function App() {
                   <div className="p-8 space-y-8">
                     <div>
                       <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-ink/40 mb-6">Color Palette</h4>
-                      <div className="grid grid-cols-5 gap-3">
+                      <div className="grid grid-cols-4 gap-3">
                         {[
-                          { id: 'classic', icon: Palette, label: 'Classic', color: 'bg-[#FBFBFA] border-stone-200' },
-                          { id: 'midnight', icon: Moon, label: 'Midnight', color: 'bg-[#0A0A0B] border-stone-800' },
-                          { id: 'sunset', icon: Sun, label: 'Sunset', color: 'bg-[#FFF7ED] border-orange-200' },
-                          { id: 'forest', icon: Trees, label: 'Forest', color: 'bg-[#F0F4F0] border-emerald-200' },
-                          { id: 'brutalist', icon: Zap, label: 'Brutal', color: 'bg-white border-black' },
+                          { id: 'classic', icon: Palette, label: 'Classic', bg: '#FBFBFA', accent: '#0ea5e9', ink: '#1C1917' },
+                          { id: 'midnight', icon: Moon, label: 'Midnight', bg: '#0A0A0B', accent: '#EAB308', ink: '#F5F5F4' },
+                          { id: 'sunset', icon: Sun, label: 'Sunset', bg: '#FFF7ED', accent: '#F97316', ink: '#431407' },
+                          { id: 'forest', icon: Trees, label: 'Forest', bg: '#F0F4F0', accent: '#10B981', ink: '#064E3B' },
+                          { id: 'brutalist', icon: Zap, label: 'Brutal', bg: '#FFFFFF', accent: '#00FF00', ink: '#000000' },
+                          { id: 'neon', icon: Sparkles, label: 'Neon', bg: '#0D0D1A', accent: '#A855F7', ink: '#E8E8FF' },
+                          { id: 'ocean', icon: Waves, label: 'Ocean', bg: '#0C1929', accent: '#06B6D4', ink: '#E0F2FE' },
+                          { id: 'rose', icon: Heart, label: 'Rosé', bg: '#FFF1F2', accent: '#F43F5E', ink: '#4C0519' },
                         ].map((p) => (
                           <button
                             key={p.id}
                             onClick={() => setTheme(p.id as any)}
                             className={`flex flex-col items-center gap-2 p-3 rounded-2xl border-2 transition-all ${
-                              theme === p.id ? 'border-accent bg-accent/5' : 'border-transparent hover:bg-ink/5'
+                              theme === p.id ? 'border-accent bg-accent/5 scale-105 shadow-lg' : 'border-transparent hover:bg-ink/5'
                             }`}
                           >
-                            <div className={`w-10 h-10 rounded-full border ${p.color} flex items-center justify-center shadow-sm`}>
-                              <p.icon className={`w-5 h-5 ${theme === p.id ? 'text-accent' : 'text-ink/40'}`} />
+                            <div 
+                              className="w-12 h-12 rounded-xl flex items-center justify-center shadow-md transition-transform"
+                              style={{ backgroundColor: p.bg, border: `2px solid ${p.accent}` }}
+                            >
+                              <p.icon className="w-5 h-5" style={{ color: p.accent }} />
                             </div>
                             <span className="text-[10px] font-bold uppercase tracking-tighter">{p.label}</span>
                           </button>
@@ -1022,6 +1058,7 @@ export default function App() {
           </div>
         </div>
       </footer>
+    </div>
     </div>
   );
 }

@@ -48,6 +48,27 @@
   --accent-muted: #CCFFCC;
 }
 
+.theme-neon {
+  --bg: #0D0D1A;
+  --ink: #E8E8FF;
+  --accent: #A855F7;
+  --accent-muted: #2E1065;
+}
+
+.theme-ocean {
+  --bg: #0C1929;
+  --ink: #E0F2FE;
+  --accent: #06B6D4;
+  --accent-muted: #164E63;
+}
+
+.theme-rose {
+  --bg: #FFF1F2;
+  --ink: #4C0519;
+  --accent: #F43F5E;
+  --accent-muted: #FFE4E6;
+}
+
 @layer base {
   body {
     @apply bg-bg text-ink antialiased transition-colors duration-500;
@@ -74,4 +95,51 @@
 .noise-bg {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   opacity: 0.05;
+}
+
+/* Animated gradient backgrounds */
+@keyframes gradientShift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(10px, -20px) scale(1.05); }
+  50% { transform: translate(-5px, 10px) scale(0.98); }
+  75% { transform: translate(-15px, -5px) scale(1.03); }
+}
+
+.animate-blob {
+  animation: gradientShift 12s ease-in-out infinite;
+}
+
+.animate-blob-delay {
+  animation: gradientShift 15s ease-in-out infinite reverse;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 60%, var(--ink) 40%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Shimmer loading skeleton */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent 25%, var(--accent-muted) 50%, transparent 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* Pulse ring for the random quiz button */
+@keyframes pulseRing {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 40%, transparent 60%); }
+  70% { box-shadow: 0 0 0 15px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+.pulse-ring {
+  animation: pulseRing 2s ease-out infinite;
 }
