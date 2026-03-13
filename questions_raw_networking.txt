@@ -1,0 +1,938 @@
+Networking and Protocols ICT
+Questions
+300 Questions with Complete Answer Key
+Easy, Medium, and Di cult Levels
+EASY LEVEL (Questions 1-100)
+Basic Networking Concepts (1-10)
+1. What does LAN stand for?
+Local Area Network - a network covering a small geographic area like
+a home, o ce, or building, typically owned and managed by a single
+organization.
+2. What does WAN stand for?
+Wide Area Network - a network spanning large geographic areas,
+connecting multiple LANs across cities, countries, or continents.
+3. What is the Internet?
+A global network of interconnected networks using standardized
+protocols (TCP/IP) to share information and resources worldwide.
+4. What does IP stand for?
+Internet Protocol - the network layer protocol responsible for
+addressing and routing packets across networks.
+5. What is an IP address?
+A unique numerical identi er (e.g., 192.168.1.1) assigned to devices
+on a network for identi cation and communication.
+6. What does TCP stand for?
+Transmission Control Protocol - a reliable, connection-oriented
+transport layer protocol ensuring data arrives complete and in order.
+7. What does UDP stand for?
+User Datagram Protocol - a connectionless, unreliable transport
+protocol used when speed is more important than reliability.
+8. What is a protocol?
+A set of rules and standards governing how data is transmitted and
+received over a network.
+9. What is bandwidth?
+The maximum amount of data that can be transmitted over a
+network connection in a given time, typically measured in bits per
+second (bps).
+10. What is latency?
+The time delay between sending data and receiving it, measured in
+milliseconds (ms).
+Network Devices (11-20)
+11. What is a router?
+A network device that forwards data packets between di erent
+networks, determining the best path using IP addresses.
+12. What is a switch?
+A network device that connects devices within a LAN, forwarding
+data using MAC addresses at the data link layer.
+13. What is a hub?
+A basic network device that broadcasts data to all connected devices
+(obsolete, replaced by switches).
+14. What is a modem?
+A device that modulates and demodulates signals, converting digital
+data to analog for transmission over phone/cable lines and vice
+versa.
+15. What is a network interface card (NIC)?
+Hardware that enables a computer to connect to a network, either
+wired (Ethernet) or wireless (Wi-Fi).
+16. What is an access point?
+A device that creates a wireless network by connecting to a wired
+network, allowing Wi-Fi-enabled devices to connect.
+17. What is a gateway?
+A device connecting networks using di erent protocols, translating
+between them to enable communication.
+18. What is a rewall?
+A security device or software that monitors and controls network
+tra c based on security rules, protecting against unauthorized
+access.
+19. What is a repeater?
+A device that ampli es or regenerates signals to extend network
+transmission distance.
+20. What is a bridge?
+A device connecting two network segments, ltering tra c based on
+MAC addresses to reduce congestion.
+IP Addressing (21-30)
+21. What is IPv4?
+Internet Protocol version 4 - uses 32-bit addresses (e.g., 192.168.1.1),
+providing approximately 4.3 billion unique addresses.
+22. What is IPv6?
+Internet Protocol version 6 - uses 128-bit addresses (e.g.,
+2001:0db8::1), providing vastly more addresses than IPv4.
+23. What is a subnet mask?
+A 32-bit number dividing an IP address into network and host
+portions (e.g., 255.255.255.0).
+24. What is a private IP address?
+IP addresses reserved for use within private networks, not routable
+on the public Internet (e.g., 192.168.x.x, 10.x.x.x).
+25. What is a public IP address?
+A globally unique IP address assigned to devices directly accessible
+from the Internet.
+26. What is DHCP?
+Dynamic Host Con guration Protocol - automatically assigns IP
+addresses and network con guration to devices on a network.
+27. What is a static IP address?
+A manually assigned, permanent IP address that doesn't change.
+28. What is a dynamic IP address?
+An IP address automatically assigned by DHCP that may change over
+time.
+29. What is NAT?
+Network Address Translation - allows multiple devices on a private
+network to share a single public IP address.
+30. What is a loopback address?
+IP address 127.0.0.1 (localhost) used to test network software without
+sending packets over the network.
+DNS and Domain Names (31-40)
+31. What does DNS stand for?
+Domain Name System - translates human-readable domain names
+(e.g., google.com) into IP addresses.
+32. What is a domain name?
+A human-readable address identifying a website or resource on the
+Internet (e.g., example.com).
+33. What is a URL?
+Uniform Resource Locator - the complete web address including
+protocol, domain, and path (e.g., https://www.example.com/page).
+34. What is a DNS server?
+A server that stores DNS records and responds to DNS queries,
+translating domain names to IP addresses.
+35. What is DNS caching?
+Temporarily storing DNS query results to speed up subsequent
+lookups for the same domain.
+36. What is a top-level domain (TLD)?
+The last part of a domain name (e.g., .com, .org, .net, .ph).
+37. What is a subdomain?
+A domain that is part of a larger domain (e.g., mail.example.com,
+where "mail" is the subdomain).
+38. What is a DNS record?
+An entry in a DNS database mapping domain names to IP addresses
+or other information.
+39. What is an A record?
+A DNS record mapping a domain name to an IPv4 address.
+40. What is a CNAME record?
+Canonical Name record - maps an alias domain name to another
+domain name.
+Basic Protocols (41-50)
+41. What is HTTP?
+HyperText Transfer Protocol - the protocol used for transmitting web
+pages and data over the Internet.
+42. What is HTTPS?
+HTTP Secure - encrypted version of HTTP using SSL/TLS for secure
+communication.
+43. What is FTP?
+File Transfer Protocol - used for transferring les between computers
+on a network.
+44. What is SMTP?
+Simple Mail Transfer Protocol - used for sending email messages
+between servers.
+45. What is POP3?
+Post O ce Protocol version 3 - retrieves email from a server to a
+client, typically deleting it from the server.
+46. What is IMAP?
+Internet Message Access Protocol - retrieves email while keeping it on
+the server, allowing access from multiple devices.
+47. What is SSH?
+Secure Shell - encrypted protocol for secure remote access and
+command execution on network devices.
+48. What is Telnet?
+A protocol for remote terminal access (unencrypted, largely replaced
+by SSH).
+49. What is ICMP?
+Internet Control Message Protocol - used for network diagnostics and
+error reporting (e.g., ping).
+50. What is ARP?
+Address Resolution Protocol - resolves IP addresses to MAC addresses
+on local networks.
+Network Topologies (51-60)
+51. What is a network topology?
+The physical or logical arrangement of devices and connections in a
+network.
+52. What is a star topology?
+All devices connect to a central hub or switch, with all tra c passing
+through the central device.
+53. What is a bus topology?
+All devices connect to a single central cable (backbone), with data
+transmitted in both directions.
+54. What is a ring topology?
+Devices connected in a circular chain, with data traveling in one
+direction around the ring.
+55. What is a mesh topology?
+Every device connects directly to every other device, providing
+redundancy and reliability.
+56. What is a hybrid topology?
+A combination of two or more di erent topologies (e.g., star-bus).
+57. What is a tree topology?
+A hierarchical topology combining multiple star topologies connected
+to a central bus.
+58. What are the advantages of star topology?
+Easy to add/remove devices, failure of one device doesn't a ect
+others, centralized management, easy troubleshooting.
+59. What are the disadvantages of star topology?
+Central device failure brings down entire network, requires more
+cable than bus topology, more expensive.
+60. What is the di erence between physical and logical topology?
+Physical topology describes physical layout of cables and devices.
+Logical topology describes how data ows through the network
+regardless of physical arrangement.
+Ports and Services (61-70)
+61. What is a port number?
+A 16-bit number (0-65535) identifying speci c processes or services
+on a networked device.
+62. What is port 80 used for?
+HTTP (web tra c).
+63. What is port 443 used for?
+HTTPS (secure web tra c).
+64. What is port 21 used for?
+FTP (File Transfer Protocol).
+65. What is port 22 used for?
+SSH (Secure Shell).
+66. What is port 25 used for?
+SMTP (email sending).
+67. What is port 53 used for?
+DNS (Domain Name System).
+68. What is port 3389 used for?
+RDP (Remote Desktop Protocol).
+69. What are well-known ports?
+Port numbers 0-1023 reserved for standard services and protocols.
+70. What are registered ports?
+Port numbers 1024-49151 assigned to speci c services by IANA but
+not reserved.
+Wireless Networking (71-80)
+71. What does Wi-Fi stand for?
+Wireless Fidelity - a brand name for wireless local area network
+(WLAN) technology based on IEEE 802.11 standards.
+72. What is an SSID?
+Service Set Identi er - the name of a wireless network that devices
+use to identify and connect to it.
+73. What is WPA?
+Wi-Fi Protected Access - a security protocol for wireless networks,
+more secure than WEP.
+74. What is WPA2?
+Wi-Fi Protected Access 2 - improved version using AES encryption, the
+standard for secure Wi-Fi.
+75. What is WPA3?
+The latest Wi-Fi security protocol with enhanced encryption and
+protection against brute-force attacks.
+76. What is WEP?
+Wired Equivalent Privacy - an obsolete, insecure wireless encryption
+standard.
+77. What is a Wi-Fi channel?
+A frequency subdivision within the Wi-Fi spectrum used to minimize
+interference between networks.
+78. What is the 2.4 GHz band?
+A Wi-Fi frequency band o ering longer range but slower speeds and
+more interference.
+79. What is the 5 GHz band?
+A Wi-Fi frequency band o ering faster speeds and less interference
+but shorter range.
+80. What is Bluetooth?
+A short-range wireless technology for connecting devices like
+headphones, keyboards, and smartphones.
+Network Models (81-90)
+81. What is the OSI model?
+Open Systems Interconnection model - a conceptual framework with
+7 layers describing how network protocols interact.
+82. What are the 7 layers of the OSI model?
+1. Physical, 2. Data Link, 3. Network, 4. Transport, 5. Session, 6.
+Presentation, 7. Application.
+83. What is the TCP/IP model?
+A simpli ed 4-layer network model: Network Access, Internet,
+Transport, Application.
+84. What is the Physical layer?
+OSI Layer 1 - handles physical transmission of bits over network
+media (cables, wireless signals).
+85. What is the Data Link layer?
+OSI Layer 2 - provides node-to-node data transfer, error detection,
+and MAC addressing.
+86. What is the Network layer?
+OSI Layer 3 - handles logical addressing (IP) and routing of packets
+between networks.
+87. What is the Transport layer?
+OSI Layer 4 - provides end-to-end communication, reliability (TCP),
+and ow control.
+88. What is the Application layer?
+OSI Layer 7 - provides network services directly to user applications
+(HTTP, FTP, SMTP).
+89. What layer does a router operate at?
+Network layer (Layer 3) - uses IP addresses for routing decisions.
+90. What layer does a switch operate at?
+Data Link layer (Layer 2) - uses MAC addresses for forwarding
+decisions.
+Basic Network Security (91-100)
+91. What is encryption?
+The process of converting data into a coded format to prevent
+unauthorized access.
+92. What is a VPN?
+Virtual Private Network - creates an encrypted tunnel over the
+Internet for secure remote access to private networks.
+93. What is a MAC address?
+Media Access Control address - a unique 48-bit hardware identi er
+assigned to network interfaces.
+94. What is MAC address ltering?
+A security method allowing or blocking devices based on their MAC
+addresses.
+95. What is a DMZ?
+Demilitarized Zone - a network segment isolating external-facing
+services from the internal network.
+96. What is malware?
+Malicious software designed to damage, disrupt, or gain
+unauthorized access to systems.
+97. What is phishing?
+A social engineering attack using fraudulent messages to trick users
+into revealing sensitive information.
+98. What is a DDoS attack?
+Distributed Denial of Service - overwhelming a target with tra c
+from multiple sources to make it unavailable.
+99. What is two-factor authentication (2FA)?
+A security method requiring two di erent forms of veri cation to
+access an account.
+100. What is a proxy server?
+An intermediary server that forwards requests between clients and
+other servers, providing anonymity and caching.
+MEDIUM LEVEL (Questions 101-200)
+Advanced IP Concepts (101-110)
+101. Explain CIDR notation.
+Classless Inter-Domain Routing notation (e.g., 192.168.1.0/24)
+speci es an IP address and subnet mask compactly. The /24 indicates
+the rst 24 bits are the network portion.
+102. What is subnetting?
+Dividing a larger network into smaller subnetworks to improve
+management, security, and e cient IP address allocation.
+103. What is a default gateway?
+The router IP address used by devices to send tra c destined for
+networks outside their local subnet.
+104. What is broadcast address?
+An address sending data to all devices on a network segment (e.g.,
+192.168.1.255 for 192.168.1.0/24).
+105. What is multicast?
+Sending data to a speci c group of devices simultaneously, more
+e cient than broadcasting.
+106. What is unicast?
+Sending data from one sender to one speci c receiver, the most
+common transmission type.
+107. What is anycast?
+Routing data to the nearest or best destination among a group
+sharing the same IP address.
+108. What is IPv4 address exhaustion?
+The depletion of available IPv4 addresses, driving adoption of IPv6
+and NAT.
+109. What is a link-local address?
+An IP address valid only on the local network segment, not routed
+(169.254.x.x in IPv4, fe80::/10 in IPv6).
+110. What is APIPA?
+Automatic Private IP Addressing - assigns 169.254.x.x address when
+DHCP is unavailable.
+Routing Concepts (111-120)
+111. What is static routing?
+Manually con gured routing table entries specifying paths to
+destination networks.
+112. What is dynamic routing?
+Routers automatically learn and update routes using routing
+protocols.
+113. What is a routing table?
+A data structure storing information about network paths, used by
+routers to make forwarding decisions.
+114. What is a routing protocol?
+A protocol enabling routers to exchange routing information and
+learn network topology.
+115. What is RIP?
+Routing Information Protocol - a distance-vector protocol using hop
+count as the metric (maximum 15 hops).
+116. What is OSPF?
+Open Shortest Path First - a link-state routing protocol using cost as
+the metric, e cient for large networks.
+117. What is BGP?
+Border Gateway Protocol - the exterior gateway protocol routing
+tra c between autonomous systems on the Internet.
+118. What is the di erence between interior and exterior
+gateway protocols?
+Interior Gateway Protocols (IGPs) like OSPF and RIP route within an
+autonomous system. Exterior Gateway Protocols (EGPs) like BGP
+route between autonomous systems.
+119. What is route aggregation?
+Combining multiple network routes into a single routing table entry
+to reduce table size.
+120. What is the metric in routing?
+A value used by routing protocols to determine the best path (hop
+count, bandwidth, delay, cost).
+TCP/IP Protocol Suite (121-130)
+121. What is the three-way handshake?
+TCP connection establishment: (1) SYN from client, (2) SYN-ACK from
+server, (3) ACK from client.
+122. What is a TCP segment?
+The Protocol Data Unit (PDU) at the transport layer containing
+headers and data.
+123. What is a UDP datagram?
+The PDU for UDP, a connectionless message with minimal header
+information.
+124. What is ow control in TCP?
+Mechanism preventing sender from overwhelming receiver using
+sliding window protocol.
+125. What is congestion control?
+TCP mechanism adjusting transmission rate based on network
+congestion to prevent packet loss.
+126. What is the TCP window size?
+The amount of data that can be sent before requiring
+acknowledgment, controlling ow.
+127. What is packet fragmentation?
+Breaking large packets into smaller fragments when the packet size
+exceeds the Maximum Transmission Unit (MTU).
+128. What is MTU?
+Maximum Transmission Unit - the largest packet size that can be
+transmitted over a network link (typically 1500 bytes for Ethernet).
+129. What is the Time to Live (TTL) eld?
+An IP header eld limiting packet lifetime by decrementing at each
+router hop, preventing routing loops.
+130. What is Quality of Service (QoS)?
+Techniques prioritizing certain types of network tra c to ensure
+performance for critical applications.
+Advanced DNS (131-140)
+131. What is DNS zone?
+A portion of the DNS namespace managed by a speci c DNS server or
+administrator.
+132. What is a DNS zone transfer?
+Copying DNS zone data from a primary DNS server to secondary
+servers for redundancy.
+133. What is recursive DNS query?
+A query where the DNS server performs all necessary lookups on
+behalf of the client.
+134. What is iterative DNS query?
+A query where the DNS server provides the best answer it knows or
+refers the client to another server.
+135. What is an MX record?
+Mail Exchange record - speci es mail servers responsible for
+receiving email for a domain.
+136. What is a PTR record?
+Pointer record - performs reverse DNS lookup, mapping IP addresses
+to domain names.
+137. What is a TXT record?
+Text record - stores arbitrary text information, often used for
+veri cation and email authentication.
+138. What is DNSSEC?
+DNS Security Extensions - adds cryptographic signatures to DNS
+records to prevent spoo ng and cache poisoning.
+139. What is DNS cache poisoning?
+An attack inserting fraudulent DNS data into a cache, redirecting
+tra c to malicious sites.
+140. What is round-robin DNS?
+A load balancing technique rotating through multiple IP addresses for
+a single domain name.
+Network Services (141-150)
+141. What is DHCP lease time?
+The duration an IP address is assigned to a device before requiring
+renewal.
+142. What are the four steps of DHCP?
+DORA: Discovery (client broadcasts), O er (server responds), Request
+(client accepts), Acknowledgment (server con rms).
+143. What is a DHCP relay agent?
+A router forwarding DHCP messages between clients and servers on
+di erent subnets.
+144. What is NAT overload (PAT)?
+Port Address Translation - multiple private IP addresses sharing one
+public IP using di erent port numbers.
+145. What is port forwarding?
+Directing external tra c on speci c ports to internal network devices
+behind NAT.
+146. What is UPnP?
+Universal Plug and Play - protocol allowing devices to automatically
+con gure port forwarding and discover services.
+147. What is a time server (NTP)?
+Network Time Protocol server providing accurate time
+synchronization across networks.
+148. What is SNMP?
+Simple Network Management Protocol - used for monitoring and
+managing network devices.
+149. What is Syslog?
+A standard protocol for sending log messages from network devices
+to a central server.
+150. What is NetBIOS?
+Network Basic Input/Output System - older protocol for name
+resolution and le sharing on Windows networks.
+VLANs and Network Segmentation (151-160)
+151. What is a VLAN?
+Virtual Local Area Network - logically segmenting a physical network
+into multiple broadcast domains.
+152. Why use VLANs?
+Improve security, reduce broadcast tra c, simplify network
+management, and logically organize devices.
+153. What is VLAN tagging?
+Adding VLAN identi cation (tag) to Ethernet frames to identify which
+VLAN they belong to.
+154. What is IEEE 802.1Q?
+The standard protocol for VLAN tagging on Ethernet networks.
+155. What is a trunk port?
+A switch port carrying tra c for multiple VLANs, typically connecting
+switches.
+156. What is an access port?
+A switch port belonging to a single VLAN, connecting end devices.
+157. What is inter-VLAN routing?
+Routing tra c between di erent VLANs using a router or Layer 3
+switch.
+158. What is a native VLAN?
+The VLAN assigned to untagged tra c on a trunk port (default VLAN
+1).
+159. What is VLAN hopping?
+A security attack exploiting VLAN con gurations to gain
+unauthorized access to other VLANs.
+160. What is voice VLAN?
+A separate VLAN dedicated to VoIP tra c for quality and security.
+Wireless Technologies (161-170)
+161. What is IEEE 802.11?
+The family of standards de ning Wi-Fi wireless networking.
+162. What is 802.11ac?
+Wi-Fi 5 standard operating on 5 GHz, supporting speeds up to 1.3+
+Gbps.
+163. What is 802.11ax (Wi-Fi 6)?
+Latest Wi-Fi standard with improved e ciency, speeds up to 9.6 Gbps,
+better performance in dense environments.
+164. What is MIMO?
+Multiple Input Multiple Output - using multiple antennas to improve
+wireless throughput and range.
+165. What is MU-MIMO?
+Multi-User MIMO - allows simultaneous communication with
+multiple devices, improving e ciency.
+166. What is beamforming?
+Technique directing wireless signals toward speci c devices rather
+than broadcasting equally in all directions.
+167. What is a wireless site survey?
+Analyzing an area to plan optimal access point placement and
+con guration.
+168. What is channel bonding?
+Combining multiple Wi-Fi channels to increase bandwidth and
+throughput.
+169. What is roaming in wireless networks?
+A device seamlessly switching between access points while
+maintaining connectivity.
+170. What is the hidden node problem?
+Two devices out of range of each other but within range of an access
+point causing collisions.
+Network Security (171-180)
+171. What is SSL/TLS?
+Secure Sockets Layer/Transport Layer Security - cryptographic
+protocols providing secure communication over networks.
+172. What is a digital certi cate?
+An electronic document binding a public key to an entity's identity,
+issued by a Certi cate Authority.
+173. What is a Certi cate Authority (CA)?
+A trusted entity issuing and managing digital certi cates.
+174. What is IPsec?
+Internet Protocol Security - a framework securing IP communications
+through authentication and encryption.
+175. What is the di erence between transport and tunnel mode in
+IPsec?
+Transport mode encrypts only the payload, tunnel mode encrypts the
+entire packet including header.
+176. What is an IDS?
+Intrusion Detection System - monitors network tra c for suspicious
+activity and alerts administrators.
+177. What is an IPS?
+Intrusion Prevention System - actively blocks detected threats in
+addition to alerting.
+178. What is a honeypot?
+A decoy system designed to attract and detect attackers while
+protecting real assets.
+179. What is network segmentation?
+Dividing a network into multiple segments to improve security and
+performance.
+180. What is zero-trust security?
+A security model requiring veri cation for every access request
+regardless of location.
+Email Protocols (181-190)
+181. What is the di erence between POP3 and IMAP?
+POP3 downloads email to one device and typically deletes from
+server. IMAP synchronizes email across multiple devices, keeping it
+on the server.
+182. What is SMTP relay?
+Forwarding email through intermediate mail servers to reach the
+destination.
+183. What is SPF?
+Sender Policy Framework - email authentication verifying sender's IP
+address against authorized senders.
+184. What is DKIM?
+DomainKeys Identi ed Mail - adds cryptographic signatures to verify
+email authenticity and integrity.
+185. What is DMARC?
+Domain-based Message Authentication, Reporting, and Conformance- builds on SPF and DKIM to prevent email spoo ng.
+186. What is email encryption?
+Encrypting email content and attachments to protect con dentiality
+(S/MIME, PGP).
+187. What is a mail exchanger?
+A server responsible for receiving email for a domain, speci ed in MX
+records.
+188. What is webmail?
+Accessing email through a web browser rather than a dedicated
+email client.
+189. What is MIME?
+Multipurpose Internet Mail Extensions - standard for encoding
+attachments and non-text content in email.
+190. What is spam ltering?
+Identifying and blocking unsolicited or malicious email messages.
+Network Performance (191-200)
+191. What is jitter?
+Variation in packet arrival times, problematic for real-time
+applications like VoIP and video.
+192. What is packet loss?
+When network packets fail to reach their destination, requiring
+retransmission or causing degraded quality.
+193. What is network throughput?
+The actual amount of data successfully transmitted over time, less
+than theoretical bandwidth.
+194. What is load balancing?
+Distributing network tra c across multiple servers or paths to
+optimize performance and reliability.
+195. What is caching?
+Storing frequently accessed data locally to reduce latency and
+bandwidth usage.
+196. What is a CDN?
+Content Delivery Network - distributed servers delivering web
+content from locations nearest to users.
+197. What is network monitoring?
+Continuously observing network performance, availability, and
+security to identify issues.
+198. What is SNMP trap?
+An unsolicited alert sent by a network device to notify administrators
+of events or problems.
+199. What is network baseline?
+Measuring normal network performance to identify anomalies and
+plan capacity.
+200. What is link aggregation?
+Combining multiple network connections into a single logical link for
+increased bandwidth and redundancy.
+DIFFICULT LEVEL (Questions 201-300)
+Advanced Routing (201-210)
+201. Explain OSPF areas and their purpose.
+OSPF divides networks into areas to reduce routing overhead. Area 0
+(backbone) connects all other areas. Hierarchical design improves
+scalability by limiting LSA ooding to within areas.
+202. What is a stub area in OSPF?
+An area that doesn't receive external routes, reducing routing table
+size. Uses default route for external destinations.
+203. What is route redistribution?
+Sharing routing information between di erent routing protocols (e.g.,
+OSPF to BGP).
+204. Explain BGP path selection criteria.
+BGP uses multiple attributes in order: Weight, Local Preference, AS
+Path length, Origin, MED, eBGP over iBGP, lowest IGP cost, oldest
+route, lowest Router ID.
+205. What is BGP route dampening?
+Suppressing unstable routes that frequently change to prevent
+routing table instability.
+206. What is policy-based routing?
+Routing tra c based on criteria beyond destination address (source,
+application, etc.) for tra c engineering.
+207. What is MPLS?
+Multiprotocol Label Switching - uses labels rather than IP addresses
+for forwarding, enabling tra c engineering and VPNs.
+208. What is an MPLS label?
+A short, xed-length identi er prepended to packets for fast
+forwarding decisions.
+209. What is a Virtual Routing and Forwarding (VRF) instance?
+Separate routing table instances on a single router, enabling network
+virtualization and isolation.
+210. What is ECMP?
+Equal-Cost Multi-Path routing - load balancing tra c across multiple
+paths with equal cost metrics.
+Advanced TCP/IP (211-220)
+211. Explain TCP congestion control algorithms.
+Algorithms like Slow Start, Congestion Avoidance, Fast Retransmit,
+and Fast Recovery dynamically adjust transmission rate based on
+network conditions detected through packet loss and ACKs.
+212. What is TCP selective acknowledgment (SACK)?
+Extension allowing receivers to acknowledge non-contiguous data
+blocks, improving e ciency when multiple packets are lost.
+213. What is TCP window scaling?
+Option allowing window sizes larger than 65,535 bytes for high
+bandwidth, high-latency networks.
+214. What is Path MTU Discovery?
+Process determining the largest packet size that can traverse a path
+without fragmentation.
+215. What is ECN?
+Explicit Congestion Noti cation - allows network devices to signal
+congestion without dropping packets.
+216. What is TCP Fast Open?
+Optimization allowing data transmission during TCP handshake,
+reducing latency for short connections.
+217. What is TCP keepalive?
+Mechanism periodically checking if a connection is still active during
+idle periods.
+218. What is the SYN ood attack and its mitigation?
+DDoS attack exploiting three-way handshake by sending numerous
+SYN packets. Mitigations include SYN cookies, rate limiting, and
+rewalls.
+219. What is TCP reset attack?
+Injecting forged RST packets to terminate legitimate TCP connections.
+220. What is QUIC protocol?
+Quick UDP Internet Connections - transport protocol built on UDP
+combining features of TCP and TLS with reduced latency (used in
+HTTP/3).
+IPv6 Advanced Concepts (221-230)
+221. Explain IPv6 address types.
+Unicast (single interface), Multicast (group), Anycast (nearest of
+group). No broadcast in IPv6.
+222. What is IPv6 Stateless Address Autocon guration (SLAAC)?
+Hosts automatically con gure IPv6 addresses using router
+advertisements without DHCP.
+223. What is the IPv6 neighbor discovery protocol?
+Replaces ARP, handles address resolution, router discovery, and
+duplicate address detection.
+224. What is IPv6 header simpli cation?
+Fixed 40-byte header with fewer elds than IPv4, improving
+processing e ciency. Extension headers handle additional options.
+225. What is dual-stack implementation?
+Running both IPv4 and IPv6 simultaneously during transition period.
+226. What is IPv6 tunneling?
+Encapsulating IPv6 packets within IPv4 for transmission across IPv4
+only networks.
+227. What is 6to4 tunneling?
+Automatic tunneling mechanism using 2002::/16 pre x to embed IPv4
+addresses.
+228. What is IPv6 unique local address (ULA)?
+Private IPv6 addresses (fc00::/7) not routable on public Internet,
+analogous to RFC 1918 addresses.
+229. What is IPv6 temporary addresses?
+Privacy extension generating temporary addresses for outbound
+connections to prevent tracking.
+230. What is IPv6 ow label?
+Header eld identifying packet ows for QoS and load balancing
+without deep packet inspection.
+Network Security Advanced (231-240)
+231. Explain the di erence between symmetric and asymmetric
+encryption.
+Symmetric uses same key for encryption/decryption (fast, e.g., AES).
+Asymmetric uses public/private key pairs (slower, e.g., RSA), enabling
+secure key exchange and digital signatures.
+232. What is Perfect Forward Secrecy (PFS)?
+Generating unique session keys that can't be compromised even if
+long-term keys are later exposed.
+233. What is a man-in-the-middle (MITM) attack?
+Intercepting and potentially altering communication between two
+parties without their knowledge.
+234. What is certi cate pinning?
+Associating a service with speci c certi cate or public key to prevent
+MITM attacks using fraudulent certi cates.
+235. What is a rainbow table attack?
+Using precomputed hash tables to crack password hashes. Defeated
+by salting.
+236. What is salt in password hashing?
+Random data added to passwords before hashing to prevent rainbow
+table attacks and ensure identical passwords have di erent hashes.
+237. Explain defense in depth strategy.
+Layered security approach using multiple overlapping defensive
+mechanisms, so single point failure doesn't compromise security.
+238. What is network access control (NAC)?
+Verifying device compliance with security policies before granting
+network access.
+239. What is 802.1X authentication?
+Port-based network access control using EAP for authenticating
+devices before allowing network access.
+240. What is RADIUS?
+Remote Authentication Dial-In User Service - centralized
+authentication, authorization, and accounting (AAA) protocol.
+SDN and Network Virtualization (241-250)
+241. What is Software-De ned Networking (SDN)?
+Separating network control plane (decision-making) from data plane
+(packet forwarding), enabling centralized programmable control.
+242. What is OpenFlow?
+Protocol enabling SDN controllers to communicate with and program
+network switches.
+243. What is a network controller in SDN?
+Centralized software managing network behavior, making routing
+decisions and pushing ow rules to switches.
+244. What is network function virtualization (NFV)?
+Virtualizing network services ( rewalls, load balancers) as software
+on standard servers rather than dedicated hardware.
+245. What is a virtual switch?
+Software-based switch in virtualized environments connecting
+virtual machines.
+246. What is VXLAN?
+Virtual Extensible LAN - encapsulation protocol creating Layer 2
+overlay networks over Layer 3 infrastructure, supporting 16 million
+virtual networks.
+247. What is network overlay?
+Virtual network built on top of physical network infrastructure,
+abstracting underlying topology.
+248. What is SD-WAN?
+Software-De ned Wide Area Network - applying SDN principles to
+WANs for intelligent tra c routing and centralized management.
+249. What is intent-based networking?
+Network management approach where administrators specify
+desired outcomes; system automatically con gures devices to achieve
+them.
+250. What is network automation?
+Using scripts and tools to automatically con gure, manage, and
+optimize networks, reducing manual intervention.
+QoS and Tra c Management (251-260)
+251. Explain Di Serv (Di erentiated Services).
+QoS architecture marking packets with DSCP values to indicate
+priority, with routers providing di erent service levels per class.
+252. What is IntServ (Integrated Services)?
+QoS model using RSVP to reserve resources for ows, providing
+guaranteed service but limited scalability.
+253. What is tra c shaping?
+Controlling network tra c rate to meet desired bandwidth pro le,
+smoothing bursts.
+254. What is tra c policing?
+Enforcing tra c rate limits by dropping or marking excess packets
+exceeding policy.
+255. What is the leaky bucket algorithm?
+Tra c shaping algorithm releasing packets at constant rate
+regardless of input rate, smoothing bursts.
+256. What is the token bucket algorithm?
+Tra c shaping allowing bursts up to bucket capacity while
+maintaining average rate.
+257. What is weighted fair queuing (WFQ)?
+Scheduling algorithm allocating bandwidth proportionally to ow
+weights, preventing starvation.
+258. What is priority queuing?
+Always serving higher-priority queues rst, potentially starving low
+priority tra c.
+259. What is class-based queuing (CBQ)?
+Hierarchical queuing assigning bandwidth guarantees to tra c
+classes with borrowing between classes.
+260. What is RED (Random Early Detection)?
+Congestion avoidance algorithm randomly dropping packets before
+queue lls, signaling congestion to TCP.
+Advanced Wireless (261-270)
+261. What is Wi-Fi 6E?
+Extension of Wi-Fi 6 (802.11ax) into the 6 GHz band, providing more
+channels and less interference.
+262. What is OFDMA?
+Orthogonal Frequency Division Multiple Access - dividing channels
+into smaller sub-channels for simultaneous multi-user transmission
+in Wi-Fi 6.
+263. What is BSS coloring?
+Wi-Fi 6 feature marking frames with color codes to distinguish
+between overlapping networks, reducing interference.
+264. What is target wake time (TWT)?
+Wi-Fi 6 feature scheduling when devices wake to transmit/receive,
+improving battery life.
+265. What is spatial reuse?
+Allowing simultaneous transmissions on same channel in di erent
+areas, increasing network capacity.
+266. What is the CSMA/CA protocol?
+Carrier Sense Multiple Access with Collision Avoidance - wireless
+medium access control using RTS/CTS to avoid collisions.
+267. What is the exposed node problem?
+A node unnecessarily deferring transmission because it hears an
+unrelated transmission.
+268. What is wireless mesh networking?
+Topology where access points connect to each other wirelessly,
+extending coverage without wired backhaul.
+269. What is the captive portal?
+Web page displayed before network access is granted, used for
+authentication or terms acceptance.
+270. What is Wi-Fi Direct?
+Technology allowing direct device-to-device connections without an
+access point.
+Network Protocols Advanced (271-280)
+271. What is RSVP?
+Resource Reservation Protocol - signaling protocol reserving network
+resources for QoS in IntServ.
+272. What is SCTP?
+Stream Control Transmission Protocol - transport protocol combining
+features of TCP and UDP, supporting multi-homing and multi
+streaming.
+273. What is SIP?
+Session Initiation Protocol - signaling protocol for VoIP, establishing,
+modifying, and terminating real-time sessions.
+274. What is RTP?
+Real-time Transport Protocol - delivering audio and video over IP
+networks with timing and sequencing.
+275. What is RTCP?
+RTP Control Protocol - monitors RTP sessions, providing feedback on
+QoS and synchronization.
+276. What is H.323?
+Suite of protocols for multimedia communication over packet
+networks (largely replaced by SIP).
+277. What is LDAP?
+Lightweight Directory Access Protocol - accessing and maintaining
+distributed directory services (like Active Directory).
+278. What is Kerberos?
+Network authentication protocol using tickets and symmetric
+cryptography to verify identities.
+279. What is OAuth?
+Authorization framework allowing third-party applications limited
+access to user resources without sharing credentials.
+280. What is SAML?
+Security Assertion Markup Language - XML-based standard for
+exchanging authentication and authorization data for single sign-on.
+Emerging Technologies (281-290)
+281. What is 5G networking?
+Fifth-generation cellular technology with higher speeds (up to 10
+Gbps), lower latency (<1ms), and massive device connectivity.
+282. What is network slicing in 5G?
+Dividing a single physical network into multiple virtual networks
+optimized for di erent use cases.
+283. What is edge computing in networking?
+Processing data near its source rather than centralized cloud,
+reducing latency for IoT and real-time applications.
+284. What is fog computing?
+Distributed computing layer between edge devices and cloud,
+providing intermediate processing and storage.
+285. What is IoT networking?
+Connecting billions of embedded devices using protocols like MQTT,
+CoAP, optimized for low power and bandwidth.
+286. What is LoRaWAN?
+Long Range Wide Area Network - low-power wireless protocol for IoT
+with long range (kilometers) but low data rates.
+287. What is Time-Sensitive Networking (TSN)?
+IEEE standards providing deterministic, low-latency communication
+over Ethernet for industrial and automotive applications.
+288. What is network telemetry?
+Automated collection and streaming of network operational data for
+real-time monitoring and analytics.
+289. What is intent-driven networking?
+Evolution of intent-based networking using AI/ML to continuously
+verify network state matches business intent.
+290. What is quantum networking?
+Using quantum mechanics principles for secure communication and
+distributed quantum computing.
+Network Troubleshooting and Analysis (291-300)
+291. What is Wireshark?
+Open-source packet analyzer capturing and displaying network
+tra c for troubleshooting and analysis.
+292. What is the ping command used for?
+Testing network connectivity by sending ICMP Echo Request packets
+and measuring round-trip time.
+293. What is traceroute/tracert?
+Tool showing the path packets take to reach a destination, identifying
+each router hop and latency.
+294. What is nslookup/dig?
+DNS troubleshooting tools querying DNS servers to diagnose name
+resolution issues.
+295. What is netstat?
+Command displaying network connections, routing tables, interface
+statistics, and protocol statistics.
+296. What is packet capture (pcap)?
+Recording network tra c for later analysis, using tools like tcpdump
+or Wireshark.
+297. What is deep packet inspection (DPI)?
+Examining packet contents beyond headers to identify applications,
+enforce policies, or detect threats.
+298. What is network address translation traversal?
+Techniques allowing applications to work through NAT (STUN, TURN,
+ICE) for peer-to-peer connections.
+299. What is the di erence between stateful and stateless
+rewalls?
+Stateful rewalls track connection state and context, allowing related
+tra c. Stateless rewalls inspect each packet independently based
+only on rules.
+300. What is zero-day vulnerability in networking?
+A previously unknown security aw exploited before vendors
+develop patches, posing critical risk until xed.

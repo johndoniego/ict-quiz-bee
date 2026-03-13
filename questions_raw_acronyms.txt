@@ -1,0 +1,643 @@
+ICT Acronyms Master List
+300 Essential ICT Acronyms with Complete Definitions
+Easy, Medium, and Difficult Levels
+EASY LEVEL (Acronyms 1-100)
+Basic Computing (1-10)
+1. CPU
+Central Processing Unit - the primary processor executing instructions and performing
+arithmetic, logic, control, and input/output operations.
+2. RAM
+Random Access Memory - volatile memory temporarily storing data and programs currently in
+use, providing fast CPU access.
+3. ROM
+Read-Only Memory - non-volatile memory permanently storing essential boot instructions and
+firmware.
+4. HDD
+Hard Disk Drive - magnetic storage device using rotating platters to store and retrieve data.
+5. SSD
+Solid-State Drive - flash memory storage without moving parts, providing faster access than
+HDDs.
+6. GPU
+Graphics Processing Unit - specialized processor for rendering graphics and parallel
+computations.
+7. PSU
+Power Supply Unit - converts AC wall power to DC and distributes to computer components.
+8. BIOS
+Basic Input/Output System - firmware initializing hardware during boot and providing runtime
+services.
+9. USB
+Universal Serial Bus - standard interface connecting peripherals to computers.
+10. LAN
+Local Area Network - network covering small geographic area (home, office, building).
+Networking Basics (11-20)
+11. WAN
+Wide Area Network - network spanning large geographic areas connecting multiple LANs.
+12. IP
+Internet Protocol - network layer protocol for addressing and routing packets.
+13. TCP
+Transmission Control Protocol - reliable, connection-oriented transport protocol.
+14. UDP
+User Datagram Protocol - connectionless, unreliable transport protocol prioritizing speed.
+15. HTTP
+HyperText Transfer Protocol - protocol transmitting web pages and data.
+16. HTTPS
+HTTP Secure - encrypted HTTP using SSL/TLS.
+17. DNS
+Domain Name System - translates domain names to IP addresses.
+18. DHCP
+Dynamic Host Configuration Protocol - automatically assigns IP addresses and configuration.
+19. FTP
+File Transfer Protocol - protocol transferring files between computers.
+20. SMTP
+Simple Mail Transfer Protocol - protocol sending email between servers.
+Web Technologies (21-30)
+21. HTML
+HyperText Markup Language - standard language creating web page structure.
+22. CSS
+Cascading Style Sheets - language describing HTML presentation and layout.
+23. JS
+JavaScript - scripting language enabling interactive web pages.
+24. URL
+Uniform Resource Locator - complete web address including protocol and path.
+25. API
+Application Programming Interface - rules enabling software communication.
+26. JSON
+JavaScript Object Notation - lightweight data interchange format.
+27. XML
+eXtensible Markup Language - structured data format.
+28. AJAX
+Asynchronous JavaScript and XML - technique updating web content without reload.
+29. SPA
+Single Page Application - web app loading single HTML displaying dynamically.
+30. PWA
+Progressive Web App - web app with native app experience.
+Storage and Memory (31-40)
+31. GB
+Gigabyte - 1,024 megabytes of storage capacity.
+32. MB
+Megabyte - 1,024 kilobytes of storage capacity.
+33. TB
+Terabyte - 1,024 gigabytes of storage capacity.
+34. PB
+Petabyte - 1,024 terabytes of storage capacity.
+35. RAID
+Redundant Array of Independent Disks - combining drives for performance/redundancy.
+36. NAS
+Network Attached Storage - dedicated file storage connected to network.
+37. SAN
+Storage Area Network - high-speed block storage network.
+38. ECC
+Error-Correcting Code - memory detecting/correcting errors.
+39. NVMe
+Non-Volatile Memory Express - high-speed SSD protocol over PCIe.
+40. SATA
+Serial ATA - interface connecting storage devices to motherboards.
+Operating Systems (41-50)
+41. OS
+Operating System - software managing hardware/software resources.
+42. GUI
+Graphical User Interface - visual interface using windows/icons/menus.
+43. CLI
+Command Line Interface - text-based interface using commands.
+44. VM
+Virtual Machine - software emulation of physical computer.
+45. VMW
+VMware - virtualization platform (vSphere, ESXi).
+46. KVM
+Kernel-based Virtual Machine - Linux kernel virtualization module.
+47. DEB
+Debian - Linux distribution (Ubuntu, Kali Linux).
+48. RPM
+Red Hat Package Manager - package format (Fedora, CentOS).
+49. APT
+Advanced Package Tool - Debian package manager.
+50. YUM
+Yellowdog Updater Modified - RPM package manager.
+Security Basics (51-60)
+51. VPN
+Virtual Private Network - encrypted tunnel over Internet.
+52. IDS
+Intrusion Detection System - monitors for malicious activity.
+53. IPS
+Intrusion Prevention System - actively blocks threats.
+54. WAF
+Web Application Firewall - protects web apps from attacks.
+55. DDoS
+Distributed Denial of Service - flooding target with traffic.
+56. MFA
+Multi-Factor Authentication - multiple verification methods.
+57. SSL
+Secure Sockets Layer - cryptographic protocol (superseded by TLS).
+58. TLS
+Transport Layer Security - secure communication protocol.
+59. PKI
+Public Key Infrastructure - managing digital certificates/public keys.
+60. CA
+Certificate Authority - trusted entity issuing digital certificates.
+Cloud Basics (61-70)
+61. IaaS
+Infrastructure as a Service - virtualized computing resources.
+62. PaaS
+Platform as a Service - development/management platform.
+63. SaaS
+Software as a Service - complete software applications.
+64. AWS
+Amazon Web Services - leading cloud provider.
+65. AZU
+Azure - Microsoft cloud platform.
+66. GCP
+Google Cloud Platform - Google's cloud services.
+67. VPC
+Virtual Private Cloud - isolated cloud network.
+68. EC2
+Elastic Compute Cloud - AWS virtual servers.
+69. S3
+Simple Storage Service - AWS object storage.
+70. RDS
+Relational Database Service - managed databases.
+Development Tools (71-80)
+71. GIT
+Distributed version control system.
+72. NPM
+Node Package Manager - JavaScript package manager.
+73. PIP
+Python package installer.
+74. VS
+Visual Studio - Microsoft IDE.
+75. VSC
+Visual Studio Code - code editor.
+76. IDE
+Integrated Development Environment - complete development toolset.
+77. SSH
+Secure Shell - encrypted remote access protocol.
+78. FTP
+File Transfer Protocol - file transfer protocol.
+79. SFTP
+SSH File Transfer Protocol - secure FTP.
+80. SCP
+Secure Copy Protocol - secure file transfer.
+Hardware Components (81-90)
+81. PCIe
+Peripheral Component Interconnect Express - high-speed expansion bus.
+82. GPU
+Graphics Processing Unit - parallel processing for graphics.
+83. NIC
+Network Interface Card - network connectivity hardware.
+84. BIOS
+Basic Input/Output System - firmware interface.
+85. UEFI
+Unified Extensible Firmware Interface - BIOS successor.
+86. POST
+Power-On Self-Test - hardware diagnostic during boot.
+87. CMOS
+Complementary Metal-Oxide-Semiconductor - BIOS settings storage.
+88. SATA
+Serial ATA - storage interface standard.
+89. NVMe
+Non-Volatile Memory Express - SSD protocol.
+90. RAID
+Redundant Array of Independent Disks - storage redundancy.
+Wireless Technologies (91-100)
+91. WiFi
+Wireless Fidelity - wireless LAN technology.
+92. BT
+Bluetooth - short-range wireless technology.
+93. LTE
+Long Term Evolution - 4G cellular technology.
+94. 5G
+Fifth Generation - next-gen cellular network.
+95. NFC
+Near Field Communication - short-range wireless.
+96. RFID
+Radio-Frequency Identification - wireless identification.
+97. WPA
+Wi-Fi Protected Access - wireless security protocol.
+98. SSID
+Service Set Identifier - wireless network name.
+99. AP
+Access Point - wireless network hub.
+100. WPS
+Wi-Fi Protected Setup - simplified wireless configuration.
+MEDIUM LEVEL (Acronyms 101-200)
+Advanced Networking (101-110)
+101. OSPF
+Open Shortest Path First - link-state routing protocol.
+102. BGP
+Border Gateway Protocol - inter-domain routing protocol.
+103. VLAN
+Virtual Local Area Network - logical network segmentation.
+104. QoS
+Quality of Service - traffic prioritization mechanisms.
+105. SDN
+Software Defined Networking - programmable networks.
+106. NFV
+Network Functions Virtualization - virtualizing network appliances.
+107. MPLS
+Multiprotocol Label Switching - traffic engineering protocol.
+108. VRF
+Virtual Routing and Forwarding - VPN isolation.
+109. GRE
+Generic Routing Encapsulation - tunneling protocol.
+110. IPsec
+Internet Protocol Security - VPN protocol suite.
+Web Development (111-120)
+111. DOM
+Document Object Model - HTML tree structure.
+112. AJAX
+Asynchronous JavaScript and XML - dynamic web updates.
+113. JSON
+JavaScript Object Notation - data format.
+114. XML
+eXtensible Markup Language - structured data.
+115. REST
+Representational State Transfer - API design style.
+116. SOAP
+Simple Object Access Protocol - XML messaging.
+117. OAuth
+Open Authorization - API authentication framework.
+118. JWT
+JSON Web Token - stateless authentication.
+119. CORS
+Cross-Origin Resource Sharing - browser security.
+120. SSR
+Server-Side Rendering - HTML generation on server.
+Programming Paradigms (121-130)
+121. OOP
+Object-Oriented Programming - classes/objects paradigm.
+122. FP
+Functional Programming - pure functions/immutability.
+123. MVP
+Model-View-Presenter - UI architecture pattern.
+124. MVC
+Model-View-Controller - web architecture pattern.
+125. MVVM
+Model-View-ViewModel - data binding pattern.
+126. SOLID
+Single Responsibility, Open/Closed, etc. principles.
+127. DRY
+Don't Repeat Yourself - coding principle.
+128. KISS
+Keep It Simple Stupid - simplicity principle.
+129. YAGNI
+You Ain't Gonna Need It - avoid over-engineering.
+130. API
+Application Programming Interface - software interface.
+Cloud Services (131-140)
+131. EC2
+Elastic Compute Cloud - AWS VMs.
+132. S3
+Simple Storage Service - AWS object storage.
+133. RDS
+Relational Database Service - managed SQL.
+134. Lambda
+Serverless compute functions.
+135. VPC
+Virtual Private Cloud - isolated networks.
+136. IAM
+Identity and Access Management - permissions.
+137. EKS
+Elastic Kubernetes Service - managed K8s.
+138. ECS
+Elastic Container Service - container orchestration.
+139. ELB
+Elastic Load Balancing - traffic distribution.
+140. Route53
+Scalable DNS service.
+Security Technologies (141-150)
+141. SIEM
+Security Information and Event Management - log analysis.
+142. SOAR
+Security Orchestration, Automation, Response.
+143. EDR
+Endpoint Detection and Response.
+144. XDR
+Extended Detection and Response.
+145. CASB
+Cloud Access Security Broker.
+146. CSPM
+Cloud Security Posture Management.
+147. CNAPP
+Cloud-Native Application Protection Platform.
+148. SASE
+Secure Access Service Edge.
+149. ZTNA
+Zero Trust Network Access.
+150. DLP
+Data Loss Prevention.
+DevOps Tools (151-160)
+151. CI/CD
+Continuous Integration/Continuous Delivery.
+152. IaC
+Infrastructure as Code.
+153. GitOps
+Git-based operational deployments.
+154. CD/CD
+Continuous Deployment/Continuous Delivery.
+155. PaC
+Policy as Code.
+156. CaC
+Compliance as Code.
+157. DaC
+Database as Code.
+158. TaC
+Testing as Code.
+159. CaC
+Configuration as Code.
+160. SecOps
+Security Operations.
+Containers and Orchestration (161-170)
+161. K8s
+Kubernetes - container orchestration.
+162. CNI
+Container Network Interface.
+163. CSI
+Container Storage Interface.
+164. CRI
+Container Runtime Interface.
+165. CRD
+Custom Resource Definition.
+166. HPA
+Horizontal Pod Autoscaler.
+167. VPA
+Vertical Pod Autoscaler.
+168. PDB
+Pod Disruption Budget.
+169. ISR
+In-place StatefulSet Resize.
+170. CSI
+Container Storage Interface.
+Big Data Technologies (171-180)
+171. Hadoop
+Distributed storage and processing framework.
+172. Spark
+Unified analytics engine.
+173. Kafka
+Distributed streaming platform.
+174. Flink
+Distributed stream processing.
+175. Hive
+Data warehouse on Hadoop.
+176. HBase
+Distributed scalable big data store.
+177. Sqoop
+Data transfer between Hadoop/SQL.
+178. Flume
+Log data ingestion.
+179. Oozie
+Workflow scheduler for Hadoop.
+180. Zookeeper
+Coordination service for distributed apps.
+Wireless Standards (181-190)
+181. WiFi6
+IEEE 802.11ax - high efficiency wireless.
+182. WiFi6E
+WiFi6 with 6GHz band.
+183. WiFi7
+IEEE 802.11be - extremely high throughput.
+184. BLE
+Bluetooth Low Energy.
+185. Zigbee
+Low-power mesh networking.
+186. Z-Wave
+Home automation protocol.
+187. LoRa
+Long Range low-power WAN.
+188. NB-IoT
+Narrowband IoT.
+189. LTE-M
+LTE for Machine Type Communications.
+190. Thread
+IP-based mesh networking.
+Hardware Standards (191-200)
+191. PCIe4
+PCI Express 4.0 - 16GT/s.
+192. PCIe5
+PCI Express 5.0 - 32GT/s.
+193. DDR4
+Double Data Rate 4 memory.
+194. DDR5
+Double Data Rate 5 memory.
+195. NVMe1.4
+Non-Volatile Memory Express 1.4.
+196. CXL
+Compute Express Link - cache coherent interconnect.
+197. UCIe
+Universal Chiplet Interconnect Express.
+198. HBM3
+High Bandwidth Memory 3.
+199. GDDR6X
+Graphics DDR 6X memory.
+200. RISC-V
+Open ISA architecture.
+DIFFICULT LEVEL (Acronyms 201-300)
+Advanced Cloud (201-210)
+201. CNCF
+Cloud Native Computing Foundation.
+202. WASM
+WebAssembly - binary instruction format.
+203. eBPF
+extended Berkeley Packet Filter.
+204. Istio
+Service mesh for microservices.
+205. Linkerd
+Lightweight service mesh.
+206. Envoy
+Cloud-native edge/proxy.
+207. Knative
+Serverless on Kubernetes.
+208. Tekton
+Kubernetes-native CI/CD.
+209. ArgoCD
+Declarative GitOps CD.
+210. Flux
+GitOps Kubernetes operator.
+AI/ML Advanced (211-220)
+211. GAN
+Generative Adversarial Network.
+212. RLHF
+Reinforcement Learning Human Feedback.
+213. MoE
+Mixture of Experts.
+214. LoRA
+Low-Rank Adaptation.
+215. QLoRA
+Quantized LoRA.
+216. PEFT
+Parameter Efficient Fine-Tuning.
+217. RAG
+Retrieval Augmented Generation.
+218. ToT
+Tree of Thoughts.
+219. CoT
+Chain of Thought.
+220. SSM
+State Space Models.
+Blockchain Advanced (221-230)
+221. ZK
+Zero Knowledge proofs.
+222. SNARK
+Succinct Non-interactive ARgument of Knowledge.
+223. STARK
+Scalable Transparent ARgument of Knowledge.
+224. FRI
+Fast Reed-Solomon Interactive Oracle Proof.
+225. PLONK
+Permutations over Lagrange-bases for oecumenical Noninteractive arguments of Knowledge.
+226. MPC
+Multi-Party Computation.
+227. TSS
+Threshold Signature Scheme.
+228. VDF
+Verifiable Delay Function.
+229. MEV
+Maximal Extractable Value.
+230. AA
+Account Abstraction.
+5G/6G Advanced (231-240)
+231. O-RAN
+Open Radio Access Network.
+232. RIC
+RAN Intelligent Controller.
+233. URLLC
+Ultra-Reliable Low Latency Communications.
+234. mMTC
+massive Machine Type Communications.
+235. eMBB
+enhanced Mobile Broadband.
+236. NR
+New Radio - 5G air interface.
+237. SA
+Standalone 5G architecture.
+238. NSA
+Non-Standalone 5G architecture.
+239. RIS
+Reconfigurable Intelligent Surfaces.
+240. ISAC
+Integrated Sensing and Communication.
+Quantum Advanced (241-250)
+241. NISQ
+Noisy Intermediate-Scale Quantum.
+242. QEC
+Quantum Error Correction.
+243. VQE
+Variational Quantum Eigensolver.
+244. QAOA
+Quantum Approximate Optimization Algorithm.
+245. QKD
+Quantum Key Distribution.
+246. QRAM
+Quantum Random Access Memory.
+247. QFT
+Quantum Fourier Transform.
+248. Toffoli
+Universal reversible quantum gate.
+249. Clifford
+Clifford group quantum gates.
+250. MBQC
+Measurement-Based Quantum Computing.
+Edge/Embedded (251-260)
+251. TinyML
+Machine Learning on microcontrollers.
+252. eBPF
+extended Berkeley Packet Filter.
+253. WASM
+WebAssembly runtime.
+254. RISC-V
+Open-source ISA.
+255. ARM64
+64-bit ARM architecture.
+256. Zephyr
+Real-time OS for IoT.
+257. Mbed
+Arm IoT development platform.
+258. ESP-IDF
+Espressif IoT framework.
+259. Nordic nRF
+Bluetooth LE SoCs.
+260. STM32Cube
+STMicroelectronics ecosystem.
+Biotech/Health Tech (261-270)
+261. CRISPR
+Clustered Regularly Interspaced Short Palindromic Repeats.
+262. mRNA
+messenger Ribonucleic Acid.
+263. scRNA-seq
+single-cell RNA sequencing.
+264. GWAS
+Genome-Wide Association Study.
+265. AlphaFold
+Protein structure prediction AI.
+266. iPSCs
+induced Pluripotent Stem Cells.
+267. CAR-T
+Chimeric Antigen Receptor T-cell.
+268. NGS
+Next Generation Sequencing.
+269. CRISPR-Cas9
+Cas9 endonuclease gene editing.
+270. Xenotransplantation
+Cross-species organ transplant.
+Space/Satellite (271-280)
+271. LEO
+Low Earth Orbit.
+272. GEO
+Geostationary Earth Orbit.
+273. MEO
+Medium Earth Orbit.
+274. Starlink
+SpaceX broadband constellation.
+275. Kuiper
+Amazon broadband constellation.
+276. NTN
+Non-Terrestrial Networks.
+277. HAPS
+High Altitude Platform Stations.
+278. SIS
+Satellite Internet Service.
+279. VLEO
+Very Low Earth Orbit.
+280. O3b
+SES medium Earth orbit.
+Sustainable Tech (281-290)
+281. neuromorphic
+Brain-inspired computing.
+282. photonic
+Light-based computing.
+283. spintronics
+Spin-based electronics.
+284. CNT
+Carbon Nanotube transistors.
+285. 2D materials
+Graphene, MoS2 semiconductors.
+286. cryogenic
+Superconducting electronics.
+287. reversible computing
+Zero-entropy computation.
+288. approximate computing
+Error-tolerant efficiency.
+289. AIMC
+Analog In-Memory Computing.
+290. DNA storage
+Molecular data storage.
+Future Networks (291-300)
+291. 6G
+Sixth Generation wireless.
+292. THz
+Terahertz communications.
+293. OAM
+Orbital Angular Momentum.
+294. cell-free
+Distributed MIMO networks.
+295. AI-RAN
+AI-native Radio Access Network.
+296. semantic comms
+Meaning-based communication.
+297. JCAS
+Joint Communication and Sensing.
+298. holographic MIMO
+3D beamforming arrays.
+299. XL-MIMO
+Extra-Large intelligent surfaces.
+300. Terabit wireless
+6G extreme capacity networks.
+Study Tips

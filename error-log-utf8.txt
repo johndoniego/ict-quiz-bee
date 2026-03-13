@@ -1,0 +1,68 @@
+﻿node : file:///C:/Users
+/viper/Music/ict-quiz-b
+ee/debug-render.mjs:11
+At line:1 char:1
++ node 
+debug-render.mjs > 
+error-log.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (file:///C:/Us   
+ er...g-render.mjs:    
+11:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+  throw Error('Dynamic 
+require of "' + x2 + 
+'" is not supported');
+        ^
+
+Error: Dynamic require 
+of "child_process" is 
+not supported
+    at file:///C:/Users
+/viper/Music/ict-quiz-b
+ee/debug-render.mjs:11:
+9
+    at node_modules/goo
+gle-auth-library/build/
+src/auth/googleauth.js 
+(file:///C:/Users/viper
+/Music/ict-quiz-bee/deb
+ug-render.mjs:56533:27)
+    at __require2 (file
+:///C:/Users/viper/Musi
+c/ict-quiz-bee/debug-re
+nder.mjs:17:50)
+    at node_modules/goo
+gle-auth-library/build/
+src/index.js (file:///C
+:/Users/viper/Music/ict
+-quiz-bee/debug-render.
+mjs:57605:24)
+    at __require2 (file
+:///C:/Users/viper/Musi
+c/ict-quiz-bee/debug-re
+nder.mjs:17:50)
+    at file:///C:/Users
+/viper/Music/ict-quiz-b
+ee/debug-render.mjs:721
+98:42
+    at ModuleJob.run (n
+ode:internal/modules/es
+m/module_job:430:25)
+    at async onImport.t
+racePromise.__proto__ (
+node:internal/modules/e
+sm/loader:661:26)
+    at async asyncRunEn
+tryPointWithESMLoader (
+node:internal/modules/r
+un_main:101:5)
+
+Node.js v24.14.0
